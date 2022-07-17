@@ -11,9 +11,6 @@ const CanvasWrapper = ({ children }) => {
   return (
     <>
       <Canvas
-        // Is this deprecated or typed wrong? Ignoring for now.
-        // @ts-ignore
-        mode="concurrent"
         style={{
           position: "absolute",
           top: 0,

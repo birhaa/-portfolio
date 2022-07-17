@@ -1325,10 +1325,10 @@
     "utility-types" "^3.10.0"
     "zustand" "^3.2.0"
 
-"@react-three/drei@^9.11.3":
-  "integrity" "sha512-4qMtbWr9+LexJBVA/mS2DmtquDLUle+Vrt5jCmulz1tsW8eYpQN8dvukZQiJ5nVQPCx3yf8icybtwY7GnxNitg=="
-  "resolved" "https://registry.npmjs.org/@react-three/drei/-/drei-9.11.3.tgz"
-  "version" "9.11.3"
+"@react-three/drei@^9.17.1":
+  "integrity" "sha512-1dSn+ulrs38D7jpEOjRMQmSLXhymBxw+KbBTxUtmOWDGi/T+T4wRxmy5lYJtv464yWrVOavCc3bgzOZDXJWAxA=="
+  "resolved" "https://registry.npmjs.org/@react-three/drei/-/drei-9.17.1.tgz"
+  "version" "9.17.1"
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@react-spring/three" "^9.3.1"
@@ -1343,7 +1343,7 @@
     "stats.js" "^0.17.0"
     "suspend-react" "^0.0.8"
     "three-mesh-bvh" "^0.5.10"
-    "three-stdlib" "^2.10.1"
+    "three-stdlib" "^2.10.2"
     "troika-three-text" "^0.46.4"
     "utility-types" "^3.10.0"
     "zustand" "^3.5.13"
@@ -5755,6 +5755,11 @@
     "get-intrinsic" "^1.0.2"
     "object-inspect" "^1.9.0"
 
+"simplex-noise@^3.0.1":
+  "integrity" "sha512-eww0SFiWLyOaUKQMJ7gbdvQJvULeJdM/Y4BiC3rrOQnYHo+MSPh465/qeXSZkpTdB9/HthumpnYD3DobZweBBQ=="
+  "resolved" "https://registry.npmjs.org/simplex-noise/-/simplex-noise-3.0.1.tgz"
+  "version" "3.0.1"
+
 "sirv@^1.0.7":
   "integrity" "sha512-JuLThK3TnZG1TAKDwNIqNq6QA2afLOCcm+iE8D1Kj3GA40pSPsxQjjJl0J8X3tsR7T+CP1GavpzLwYkgVLWrZQ=="
   "resolved" "https://registry.npmjs.org/sirv/-/sirv-1.0.19.tgz"
@@ -6101,7 +6106,7 @@
   "resolved" "https://registry.npmjs.org/three-mesh-bvh/-/three-mesh-bvh-0.5.10.tgz"
   "version" "0.5.10"
 
-"three-stdlib@^2.10.1", "three-stdlib@^2.10.2":
+"three-stdlib@^2.10.2":
   "integrity" "sha512-A4++o7962jrRDo0Mm2I+2LaT62RRA8p8IJyHFnPfOxSk+90qGSm2vSfSdJ+3HugzABjStQyQuvnQmdxxZolzkw=="
   "resolved" "https://registry.npmjs.org/three-stdlib/-/three-stdlib-2.10.2.tgz"
   "version" "2.10.2"

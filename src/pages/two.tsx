@@ -1,3 +1,6 @@
+import Beach from "@/components/canvas/Beach/Beach";
+import Ocean from "@/components/canvas/Ocean/Ocean";
+import { Sky } from "@react-three/drei";
 import dynamic from "next/dynamic";
 const Box = dynamic(() => import("@/components/canvas/Box"), {
   ssr: false,
@@ -6,6 +9,7 @@ const Box = dynamic(() => import("@/components/canvas/Box"), {
 // DOM elements here
 const DOM = () => {
   return (
+    <>
     <div
       style={{
         width: "100%",
@@ -14,8 +18,12 @@ const DOM = () => {
         justifyContent: "center",
       }}
     >
-      <h1>Combine your DOM and 3D</h1>
+      <h1>Birgitte Haavardsholm</h1>
     </div>
+    <div>
+       <p>full stack ~ creative developer - consultant </p>
+    </div>
+    </>
   );
 };
 
@@ -25,7 +33,10 @@ const R3F = () => {
     <>
       <gridHelper />
       <axesHelper />
-      <Box route="/" />
+      <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />
+      <Ocean />
+      <Beach />
+      {/* <Box route="/" /> */}
     </>
   );
 };
