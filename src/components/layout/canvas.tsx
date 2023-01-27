@@ -15,6 +15,7 @@ const CanvasWrapper = ({ children }) => {
           position: "absolute",
           top: 0,
         }}
+        shadows
       >
         <Stats />
         <Controls />

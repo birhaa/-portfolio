@@ -19,7 +19,7 @@ void main() {
   //vec3 pos = vec3(position.x, position.y, clamp(z, 0.0, 1.0) );
 
   vec3 pos = position;
-  pos.z = cos(-pos.x * 0.5 + time * 1.2) * (1. - abs(pos.x) / 15.)*0.1;
+  pos.z = cos(-pos.x * 0.5 + time * 1.2) * (1. - abs(pos.x) / 15.)*0.05;
 
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
 }

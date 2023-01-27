@@ -1,0 +1,11 @@
+Model Information:
+* title:	HKU Art Module - Estofado
+* source:	https://sketchfab.com/3d-models/hku-art-module-estofado-90f2138d61a4469ca278e38da62f372f
+* author:	HKU Student 3035341 (https://sketchfab.com/eyalunya)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "HKU Art Module - Estofado" (https://sketchfab.com/3d-models/hku-art-module-estofado-90f2138d61a4469ca278e38da62f372f) by HKU Student 3035341 (https://sketchfab.com/eyalunya) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { A11y } from "@react-three/a11y";
 import { useEffect, useRef } from "react";
-import { shaderMaterial } from "@react-three/drei";
+import { Edges, shaderMaterial, useTexture } from "@react-three/drei";
 import { extend, useFrame } from "@react-three/fiber";
 
 import vertex from "./shaders/ocean.vert";
@@ -27,14 +27,23 @@ ColorShiftMaterial.key = THREE.MathUtils.generateUUID();
 
 extend({ ColorShiftMaterial });
 
+
+
 const Ocean = () => {
   const mesh = useRef(null);
+  const mesh2 = useRef(null);
+  const [colorMap] = useTexture([
+    'water.jpeg'
+  ])
 
   useEffect(()=>{
     mesh.current.rotation.x = -Math.PI/2.0;
     mesh.current.material.side = THREE.DoubleSide;
+    mesh.current.material.uniforms.texture1 = {value : colorMap};
 
-  },[mesh])
+    mesh2.current.rotation.x = -Math.PI/2.0;
+    mesh2.current.position.y -= 0.5;
+  },[mesh, mesh2])
 
   useFrame((state, delta) => {
 
@@ -58,7 +67,18 @@ const Ocean = () => {
           <colorShiftMaterial key={ColorShiftMaterial.key} time={0}/>
         </mesh>
       </A11y>
-      <directionalLight position={[5, 5, 5]} />
+      <A11y
+        role="image"
+        description={`Ocean`}
+      >
+        <mesh
+        ref={mesh2}
+        >
+          <planeBufferGeometry args={[100, 100, 1, 1]} />
+          {/* @ts-ignore */}
+          <meshLambertMaterial color={new THREE.Color( 0xa1f9ff )}/>
+        </mesh>
+      </A11y>
       <ambientLight />
     </>
   );

@@ -44,13 +44,12 @@ const Beach = () => {
       >
         <mesh
           ref={mesh}
+          receiveShadow
         >
           <planeBufferGeometry args={[10, 10, 100, 100]}  />
-          <meshBasicMaterial color={"orange"}/>
+          <meshToonMaterial color={0xffcaad}/>
         </mesh>
       </A11y>
-      <directionalLight position={[5, 5, 5]} />
-      <ambientLight />
     </>
   );
 };
