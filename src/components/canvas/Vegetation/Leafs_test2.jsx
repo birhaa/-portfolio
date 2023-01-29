@@ -13,7 +13,7 @@ export default function Leaf2({ ...props }) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]}>
-        <mesh castShadow receiveShadow geometry={nodes.Howea_f__A001_2.geometry} material={materials.Material__1} >
+        <mesh userData={{ depthWrite: false }}  castShadow receiveShadow geometry={nodes.Howea_f__A001_2.geometry} material={materials.Material__1} >
         <meshToonMaterial color={0x6fb089} side={THREE.DoubleSide} />
         <Edges scale={1.0} />
         </mesh>

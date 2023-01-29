@@ -2,6 +2,7 @@
 
 uniform float time;
 varying vec2 vUv;
+varying vec4 WorldPosition;
 
 void main() {
   float _Steepness = 0.2;
@@ -22,4 +23,5 @@ void main() {
   pos.z = cos(-pos.x * 0.5 + time * 1.2) * (1. - abs(pos.x) / 15.)*0.05;
 
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+  WorldPosition = modelMatrix * vec4(pos, 1.0);
 }

@@ -8,7 +8,7 @@ import Anime2 from "@/components/canvas/Vegetation/Anime2";
 import Anime_Rigged from "@/components/canvas/Vegetation/Anime_rigged";
 import Leaf from "@/components/canvas/Vegetation/Leafs_test";
 import Leaf2 from "@/components/canvas/Vegetation/Leafs_test2";
-import { Sky } from "@react-three/drei";
+import { Sky, useDepthBuffer } from "@react-three/drei";
 import dynamic from "next/dynamic";
 import { Suspense, useRef, useState } from "react";
 import { EffectComposer, Vignette, Outline } from '@react-three/postprocessing'
@@ -16,6 +16,7 @@ import { BlendFunction, Resizer, KernelSize } from 'postprocessing'
 import { Scene } from "three";
 import { useFrame, useThree } from "@react-three/fiber";
 import { OutlineEffect } from 'three/examples/jsm/effects/OutlineEffect'
+import { useDepthBufferCustom } from "@/helpers/useDepthBufferCustom";
 
 
 function Effect() {
@@ -57,6 +58,11 @@ const DOM = () => {
 const R3F = () => {
   const {scene, size } = useThree()
   const [objects, setObjects] = useState([])
+  const depthBuffer = useDepthBufferCustom({
+    size: 256, // Size of the FBO, 256 by default
+    frames: Infinity, // How many frames it renders, Infinity by default
+  })
+
   const originY = -4.5;
   return (
     <Suspense fallback={null}>
@@ -65,7 +71,7 @@ const R3F = () => {
       {/* <axesHelper /> */}
       {/* <fog attach="fog" color="white" near={100} far={1000} /> */}
       <Sky distance={10000} sunPosition={[0.0, -1.0, 100.0]} inclination={0.0} azimuth={1.0} />
-      <Ocean />
+      <Ocean depthBuffer={depthBuffer} />
       <Beach />
       <Laptop/>
       {/* <Chartest /> */}
